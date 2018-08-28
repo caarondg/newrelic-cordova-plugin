@@ -18,7 +18,7 @@ module.exports = {
   /**
    * gradle build paths
    */
-  gradleBuildPath: path.join("platforms", "android", "app", "build.gradle"),
+  gradleBuildPath: path.join("platforms", "android", "build.gradle"),
 
   /**
    * Android Plugin Config
@@ -28,7 +28,7 @@ module.exports = {
   /**
    * Agent build extension
    */
-  nrTag: "\n// NEWRELIC ADDED\n" 
+  nrTag: "\n// NEWRELIC ADDED\n"
     + "buildscript {\n\tdependencies {\n\t\tclasspath 'com.newrelic.agent.android:agent-gradle-plugin:{AGENT_VER}'\n\t}\n}\n"
     + "dependencies {\n\tcompile ('com.newrelic.agent.android:android-agent:{AGENT_VER}')\n}\n"
     + "{PLUGIN}"
